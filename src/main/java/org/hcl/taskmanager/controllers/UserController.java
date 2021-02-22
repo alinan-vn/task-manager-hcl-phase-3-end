@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
 	@Autowired 
-	UserCrudRepository userCrudRepository;
+	private UserCrudRepository userCrudRepository;
 	
 	@GetMapping("/users")
 	public Iterable<UserEntity> getAllUsers(){
@@ -24,7 +24,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/user/{id}")
-	public UserEntity getUser(@PathVariable Long id) {
+	public UserEntity getUserById(@PathVariable Long id) {
 		return userCrudRepository.findById(id).get();
 	}
 	
