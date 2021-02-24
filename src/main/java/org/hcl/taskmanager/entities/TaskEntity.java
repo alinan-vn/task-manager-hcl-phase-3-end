@@ -29,4 +29,9 @@ public class TaskEntity {
 	public String getDescription() { return description; }
 	public void setDescription(String description) { this.description = description; }
 	
+	@Column(name = "severity")
+	private String severity;
+	public String getSeverity() { return severity; }
+	public void setSeverity(String severity) { this.severity = severity; }
+	
 }
